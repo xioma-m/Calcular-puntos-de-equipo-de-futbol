@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calcular puntos de un equipo de fútbol</title>
+    </head>
+    <body>
+        <h1>PROGRAMA CALCULAR PUNTOS DE UN EQUIPO DE FUTBOL</h1>
+        <!--programa que calcule las puntuaciones de un equipo en una liga
+        partido ganado = 3 puntos
+        partido empatado = 1 punto-->
+        <script>
+            function saltarLinea(){
+                document.write("<br>");
+                document.write("<br>");
+                document.write("<br>");
+            }
+            function imprimir(frase){
+                document.write(frase);
+                saltarLinea();
+            }
+
+            var victorias = parseInt(prompt("Informe la cantidad de victorias"));
+            var empates = parseInt(prompt("Informe la cantidad de empates"));
+
+            var puntosTotal = victorias * 3 + empates;
+            if (isNaN(victorias) || isNaN(empates)) {
+                imprimir("Por favor, ingrese números válidos para las victorias y empates.");
+            } else {
+                const puntosTotal = (victorias * 3) + empates;
+                imprimir("El total de puntos del equipo es: " + puntosTotal);
+            }
+
+        </script>
+    </body>
+</html> 
